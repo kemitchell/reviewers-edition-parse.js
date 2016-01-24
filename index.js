@@ -4,11 +4,11 @@ var components = require('./numbers')
 var regularExpression = require('./regular-expression')
 
 function reviewersEditionParse(argument) {
-  var parsed = regularExpression.exec(argument)
+  var matches = regularExpression.exec(argument)
   return components.reduce(
-    function(returned, component, index) {
-      var value = parsed[( index + 1 )]
-      if (value !== undefined) {
-        returned[component] = parseInt(value) }
-      return returned },
+    function(parsed, component, index) {
+      var number = matches[( index + 1 )]
+      if (number !== undefined) {
+        parsed[component] = parseInt(number) }
+      return parsed },
     { }) }

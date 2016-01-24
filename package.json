@@ -10,11 +10,14 @@
   "files": [
     "LICENSE",
     "README.md",
-    "index.js"
+    "index.js",
+    "regular-expression.js"
   ],
   "license": "MIT",
   "repository": "kemitchell/semantic-edition-parse.js",
   "scripts": {
+    "prepublish": "node build-regular-expression.js > regular-expression.js",
+    "pretest": "npm run prepublish",
     "test": "defence README.md | replace-require-self | node"
   }
 }

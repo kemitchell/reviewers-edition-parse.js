@@ -1,17 +1,26 @@
 module.exports = semanticEditionParse
 
+var digit = '[1-9][0-9]*'
+
 var EUCD = new RegExp(
   '^' +
-  '([1-9][0-9]*)e' +
-  '([1-9][0-9]*)u' +
-  '([1-9][0-9]*)c' +
-  '([1-9][0-9]*)d' +
+  '(' + digit + ')e' +
+  '(?:' +
+    '(' + digit + ')u' +
+    '(?:' +
+      '(' + digit + ')c' + ')?' + ')?' +
+  '(?:' +
+    '(' + digit + ')d' + ')?' +
   '$')
+
+var components = [ 'edition', 'update', 'correction', 'draft' ]
 
 function semanticEditionParse(argument) {
   var parsed = EUCD.exec(argument)
-  return {
-    edition: parseInt(parsed[1]),
-    update: parseInt(parsed[2]),
-    correction: parseInt(parsed[3]),
-    draft: parseInt(parsed[4]) } }
+  var returned = { }
+  components.forEach(function(component, index) {
+    var group = ( index + 1 )
+    var value = parsed[group]
+    if (value !== undefined) {
+      returned[component] = parseInt(value) } })
+  return returned }

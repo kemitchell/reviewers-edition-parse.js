@@ -135,7 +135,7 @@ assert.deepStrictEqual(
   { edition: 4, update: 5, correction: 8, draft: 1 })
 ```
 
-# Helpful Data
+# Modules
 
 An array of names for the numbers of reviewers editions are packaged as a JSON file, and can be required separately.
 

@@ -134,3 +134,30 @@ assert.deepStrictEqual(
   parse('4e5u8c1d'),
   { edition: 4, update: 5, correction: 8, draft: 1 })
 ```
+
+# Helpful Data
+
+An array of names for the numbers of reviewers editions are packaged as a JSON file, and can be required separately.
+
+```javascript
+assert.deepStrictEqual(
+  require('reviewers-edition-parse/numbers'),
+  [ 'edition', 'update', 'correction', 'draft' ])
+```
+
+The regular expression used to parse strings can be also be required separately.
+
+```javascript
+var re = require('reviewers-edition-parse/regular-expression')
+assert(re.test('1e'))
+```
+
+The match groups of the regular expression correspond to the order of number names.
+
+```javascript
+var match = re.exec('1e2u3c4d')
+assert.deepStrictEqual(match[1], '1')
+assert.deepStrictEqual(match[2], '2')
+assert.deepStrictEqual(match[3], '3')
+assert.deepStrictEqual(match[4], '4')
+```

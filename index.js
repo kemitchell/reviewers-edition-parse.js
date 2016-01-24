@@ -5,13 +5,14 @@ var captureDigit = '([1-9][0-9]*)'
 var EUCD = new RegExp(
   '^' +
   captureDigit + 'e' +
-  '(?:' +
+  optional(
     captureDigit + 'u' +
-    '(?:' +
-      captureDigit + 'c' + ')?' + ')?' +
-  '(?:' +
-    captureDigit + 'd' + ')?' +
+    optional(captureDigit + 'c')) +
+  optional(captureDigit + 'd') +
   '$')
+
+function optional(reString) {
+  return ( '(?:' + reString + ')?' ) }
 
 var components = [ 'edition', 'update', 'correction', 'draft' ]
 

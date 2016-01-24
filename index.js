@@ -1,16 +1,16 @@
 module.exports = semanticEditionParse
 
-var digit = '[1-9][0-9]*'
+var captureDigit = '([1-9][0-9]*)'
 
 var EUCD = new RegExp(
   '^' +
-  '(' + digit + ')e' +
+  captureDigit + 'e' +
   '(?:' +
-    '(' + digit + ')u' +
+    captureDigit + 'u' +
     '(?:' +
-      '(' + digit + ')c' + ')?' + ')?' +
+      captureDigit + 'c' + ')?' + ')?' +
   '(?:' +
-    '(' + digit + ')d' + ')?' +
+    captureDigit + 'd' + ')?' +
   '$')
 
 var components = [ 'edition', 'update', 'correction', 'draft' ]

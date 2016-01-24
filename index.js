@@ -1,8 +1,7 @@
 module.exports = reviewersEditionParse
 
-var regularExpression = require('./regular-expression')
-
 var components = require('./numbers')
+var regularExpression = require('./regular-expression')
 
 function reviewersEditionParse(argument) {
   var parsed = regularExpression.exec(argument)

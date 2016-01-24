@@ -13,6 +13,12 @@
     "index.js",
     "regular-expression.js"
   ],
+  "keywords": [
+    "parser",
+    "prose",
+    "version",
+    "versioning"
+  ],
   "license": "MIT",
   "repository": "kemitchell/reviewers-edition-parse.js",
   "scripts": {

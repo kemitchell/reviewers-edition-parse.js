@@ -1,6 +1,6 @@
 {
-  "name": "semantic-edition-parse",
-  "description": "parse semantic edition numbers",
+  "name": "reviewers-edition-parse",
+  "description": "parse reviewers' edition numbers",
   "version": "0.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "devDependencies": {
@@ -14,7 +14,7 @@
     "regular-expression.js"
   ],
   "license": "MIT",
-  "repository": "kemitchell/semantic-edition-parse.js",
+  "repository": "kemitchell/reviewers-edition-parse.js",
   "scripts": {
     "prepublish": "node build-regular-expression.js > regular-expression.js",
     "pretest": "npm run prepublish",

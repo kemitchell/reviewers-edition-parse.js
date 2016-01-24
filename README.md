@@ -1,6 +1,6 @@
 ```javascript
 var assert = require('assert')
-var parse = require('semantic-edition-parse')
+var parse = require('reviewers-edition-parse')
 
 assert.deepStrictEqual(
   parse('2e'),

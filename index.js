@@ -1,10 +1,10 @@
-module.exports = semanticEditionParse
+module.exports = reviewersEditionParse
 
 var regularExpression = require('./regular-expression')
 
 var components = [ 'edition', 'update', 'correction', 'draft' ]
 
-function semanticEditionParse(argument) {
+function reviewersEditionParse(argument) {
   var parsed = regularExpression.exec(argument)
   var returned = { }
   components.forEach(function(component, index) {

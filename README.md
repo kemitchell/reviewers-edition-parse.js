@@ -93,8 +93,7 @@ the lower-case letter "u". So "second edition, fifth update" becomes
 ```javascript
 assert.deepStrictEqual(
   parse('2e5u'),
-  { edition: 2,
-    update: 5 })
+  { edition: 2, update: 5 })
 ```
 
 The seventh correction to that edition adds the number seven followed
@@ -104,9 +103,7 @@ correction" becomes `2e5u7c`.
 ```javascript
 assert.deepStrictEqual(
   parse('2e5u7c'),
-  { edition: 2,
-    update: 5,
-    correction: 7 })
+  { edition: 2, update: 5, correction: 7 })
 ```
 
 The first draft of a new fourth edition would use the reviewers edition
@@ -116,8 +113,7 @@ lower-case letter "d". So "fourth edition, first draft" becomes `4e1d`.
 ```javascript
 assert.deepStrictEqual(
   parse('4e1d'),
-  { edition: 4,
-    draft: 1 })
+  { edition: 4, draft: 1 })
 ```
 
 Reviewers editions can similarly describe various drafts of new updates
@@ -127,9 +123,7 @@ and corrections. So "fourth edition, fifth update, first draft" becomes
 ```javascript
 assert.deepStrictEqual(
   parse('4e5u1d'),
-  { edition: 4,
-    update: 5,
-    draft: 1 })
+  { edition: 4, update: 5, draft: 1 })
 ```
 
 And "fourth edition, fifth update, eighth correction, first draft"
@@ -138,8 +132,5 @@ becomes `4e5u8c1d`.
 ```javascript
 assert.deepStrictEqual(
   parse('4e5u8c1d'),
-  { edition: 4,
-    update: 5,
-    correction: 8,
-    draft: 1 })
+  { edition: 4, update: 5, correction: 8, draft: 1 })
 ```

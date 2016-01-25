@@ -212,3 +212,9 @@ This package uses [semantic versioning](http://semver.org/) numbers.
 
 2.0.0 correctly parses inputs like `1e3c` and clarifies that the parser
 function returns `false` for invalid inputs.
+
+# reved
+
+This package is bundled with other functions for
+creating and manipulating reviewers editions in
+[reved](https://www.npmjs.com/packages/reved).

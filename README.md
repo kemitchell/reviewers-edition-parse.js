@@ -204,3 +204,12 @@ assert.equal(match[2], '2')
 assert.equal(match[3], '3')
 assert.equal(match[4], '4')
 ```
+
+# Versions of this Package
+
+This package uses [semantic versioning](http://semver.org/) numbers.
+
+1.x releases are deprecated.
+
+2.0.0 correctly parses inputs like `1e3c` and clarifies that the parser
+function returns `false` for invalid inputs.

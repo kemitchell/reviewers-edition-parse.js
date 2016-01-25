@@ -57,11 +57,11 @@ For example, if the working group publishes two drafts of a second
 update to the third edition, those drafts will be the fourth edition,
 first draft and fourth edition, second draft.
 
-# Parser Function
+# Exported Module
 
-This JavaScript package exports a single function that parses reviewers
-edition short code strings, returning structured representations of
-their components.
+This npm package exports a single function that parses reviewers edition
+short code strings, returning structured representations of their
+components.
 
 ```javascript
 var parse = require('reviewers-edition-parse')

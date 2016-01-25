@@ -82,9 +82,7 @@ is written followed by the lower-case letter "u". So "second edition"
 becomes `2e`:
 
 ```javascript
-assert.deepStrictEqual(
-  parse('2e'),
-  { edition: 2 })
+assert.deepStrictEqual(parse('2e'), { edition: 2 })
 ```
 
 An _edition_ number cannot be zero, nor can it start with a zero.
@@ -99,9 +97,7 @@ the lower-case letter "u". So "second edition, fifth update" becomes
 `2e5u`.
 
 ```javascript
-assert.deepStrictEqual(
-  parse('2e5u'),
-  { edition: 2, update: 5 })
+assert.deepStrictEqual(parse('2e5u'), { edition: 2, update: 5 })
 ```
 
 An _edition_ number cannot be zero, nor can it start with a zero.
@@ -132,9 +128,7 @@ An edition that has not been updated can also be corrected. So "third
 edition, second correction" becomes `3e2c`.
 
 ```javascript
-assert.deepStrictEqual(
-  parse('3e2c'),
-  { edition: 3, correction: 2 })
+assert.deepStrictEqual(parse('3e2c'), { edition: 3, correction: 2 })
 ```
 
 The first draft of a new fourth edition would use the reviewers edition
@@ -142,9 +136,7 @@ code for the fourth edition, followed by the number one and the
 lower-case letter "d". So "fourth edition, first draft" becomes `4e1d`.
 
 ```javascript
-assert.deepStrictEqual(
-  parse('4e1d'),
-  { edition: 4, draft: 1 })
+assert.deepStrictEqual(parse('4e1d'), { edition: 4, draft: 1 })
 ```
 
 Reviewers editions can similarly describe various drafts of new updates

@@ -173,7 +173,8 @@ assert.equal(parse('1.0.0'), false)
 
 # Modules
 
-An array of names for the numbers of reviewers editions are packaged as a JSON file, and can be required separately.
+An array of names for the numbers of reviewers editions are packaged as
+a JSON file, and can be required separately.
 
 ```javascript
 assert.deepStrictEqual(
@@ -181,14 +182,16 @@ assert.deepStrictEqual(
   [ 'edition', 'update', 'correction', 'draft' ])
 ```
 
-The regular expression used to parse strings can be also be required separately.
+The regular expression used to parse strings can be also be required
+separately.
 
 ```javascript
 var re = require('reviewers-edition-parse/regular-expression')
 assert(re.test('1e'))
 ```
 
-The match groups of the regular expression correspond to the order of number names.
+The match groups of the regular expression correspond to the order of
+number names.
 
 ```javascript
 var match = re.exec('1e2u3c4d')

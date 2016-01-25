@@ -192,8 +192,8 @@ The match groups of the regular expression correspond to the order of number nam
 
 ```javascript
 var match = re.exec('1e2u3c4d')
-assert.deepStrictEqual(match[1], '1')
-assert.deepStrictEqual(match[2], '2')
-assert.deepStrictEqual(match[3], '3')
-assert.deepStrictEqual(match[4], '4')
+assert.equal(match[1], '1')
+assert.equal(match[2], '2')
+assert.equal(match[3], '3')
+assert.equal(match[4], '4')
 ```

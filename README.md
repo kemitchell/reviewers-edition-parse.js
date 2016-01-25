@@ -144,6 +144,12 @@ assert.deepStrictEqual(
   { edition: 4, update: 5, correction: 8, draft: 1 })
 ```
 
+The parser function returns `false` for any invalid reviewers edition.
+
+```javascript
+assert.equal(parse('1.0.0'), false)
+```
+
 # Modules
 
 An array of names for the numbers of reviewers editions are packaged as a JSON file, and can be required separately.

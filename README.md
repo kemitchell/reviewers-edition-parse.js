@@ -14,7 +14,8 @@ Each reviewers edition has up to four numbers.
 4. A _draft_ number
 
 Every reviewers edition has an _edition_ number. The _edition_ number
-and any other numbers must be whole numbers, one or greater.
+and any other numbers must be whole numbers, one or greater, written
+without any leading zeros.
 
 These numbers increase over time for new published versions of a
 project. Correction numbers restart at one for every new update, and

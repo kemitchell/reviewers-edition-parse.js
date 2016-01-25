@@ -29,45 +29,44 @@ users of older editions.
 1. When authors recommend users review a new edition in its entirety to
    ensure it meets their needs, they increase the _edition_ number.
 
-   For example, if a working group rewrites the second edition of a
-   form privacy notice from scratch, they will release the rewrite as
-   the third edition of the form.
+   For example, if a working group rewrites "second edition" of a form
+   privacy notice from scratch, they will release the rewrite as the
+   "third edition" of the form.
 
-   Users of the first and second editions will know they should review
-   the new third edition from top to bottom before substituting for the
-   older, second edition.
+   Users of "first edition" and "second edition" will know they should
+   review new "third edition" from top to bottom before substituting for
+   the editions they currently use.
 
 2. When authors recommend users review at least the new or changed parts
    of a new edition, they increase the _update_ number.
 
-   For example, if the working group adds a new paragraph to the third
-   edition of its form privacy notice on location data, they will
-   release the expanded policy as the third edition, first update. If
-   they later rephrase a paragraph on genetic privacy, the will release
-   the updated policy as the third edition, second update.
+   For example, if the working group adds a new paragraph to "third
+   edition" of its form privacy notice on location data, they will
+   release the expanded policy as "third edition, first update". If they
+   later rephrase a paragraph on genetic privacy, the will release the
+   updated policy as "third edition, second update".
 
-   Users of the original third edition will know to review at least the
-   parts of the form that changed.
+   Users of "third edition" will know to review at least the parts of
+   the form that changed.
 
 4. When authors make only typographic or other, minor corrections that
    users need not review, they increase the _correction_ number.
 
-   For example, if the working group corrects a spelling error in the
-   second edition, first update of their form, they will release the
-   corrected form as second edition, first update, first correction. If
-   they later catch and correct a typographical error, the resulting
-   edition will be the second edition, first update, second correction.
+   For example, if the working group corrects a spelling error in
+   "second edition, first update" of their form, they will release the
+   corrected form as "second edition, first update, first correction".
+   If they later catch and correct a typographical error, the resulting
+   edition will be "second edition, first update, second correction".
 
-   Users of the original second edition, first update will know the
-   working group advises they can use the corrected editions without
-   further review.
+   Users of "second edition, first update" will know the working group
+   advises they can use the corrected editions without further review.
 
 Authors can also use reviewers editions to mark drafts of a new edition,
-update, or correction editions to come.
+update, or correction to come.
 
-For example, if the working group publishes two drafts of a second
-update to the third edition, those drafts will be the fourth edition,
-first draft and fourth edition, second draft.
+For example, if the working group publishes two drafts of the second
+update to the third edition, those drafts will be "fourth edition, first
+draft" and "fourth edition, second draft".
 
 # Exported Module
 
@@ -160,8 +159,8 @@ assert.deepStrictEqual(
   { edition: 4, update: 5, draft: 1 })
 ```
 
-And "fourth edition, fifth update, eighth correction, first draft"
-becomes `4e5u8c1d`.
+Similarly, "fourth edition, fifth update, eighth correction, first
+draft" becomes `4e5u8c1d`.
 
 ```javascript
 assert.deepStrictEqual(

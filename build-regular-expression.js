@@ -3,9 +3,8 @@ var captureDigit = '([1-9][0-9]*)'
 var EUCD = new RegExp(
   '^' +
   captureDigit + 'e' +
-  optional(
-    captureDigit + 'u' +
-    optional(captureDigit + 'c')) +
+  optional(captureDigit + 'u') +
+  optional(captureDigit + 'c') +
   optional(captureDigit + 'd') +
   '$')
 

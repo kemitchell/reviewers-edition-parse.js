@@ -106,6 +106,15 @@ assert.deepStrictEqual(
   { edition: 2, update: 5, correction: 7 })
 ```
 
+An edition that has not been updated can also be corrected. So "third
+edition, second correction" becomes `3e2c`.
+
+```javascript
+assert.deepStrictEqual(
+  parse('3e2c'),
+  { edition: 3, correction: 2 })
+```
+
 The first draft of a new fourth edition would use the reviewers edition
 code for the fourth edition, followed by the number one and the
 lower-case letter "d". So "fourth edition, first draft" becomes `4e1d`.

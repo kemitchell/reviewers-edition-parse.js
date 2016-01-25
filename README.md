@@ -29,9 +29,13 @@ users of older editions.
 1. When authors recommend users review a new edition in its entirety to
    ensure it meets their needs, they increase the _edition_ number.
 
-   For example, if a working group rewrites the second edition of a form
-   privacy notice from scratch, they will release the rewrite as the
-   third edition of the form.
+   For example, if a working group rewrites the second edition of a
+   form privacy notice from scratch, they will release the rewrite as
+   the third edition of the form.
+
+   Users of the first and second editions will know they should review
+   the new third edition from top to bottom before substituting for the
+   older, second edition.
 
 2. When authors recommend users review at least the new or changed parts
    of a new edition, they increase the _update_ number.
@@ -42,6 +46,9 @@ users of older editions.
    they later rephrase a paragraph on genetic privacy, the will release
    the updated policy as the third edition, second update.
 
+   Users of the original third edition will know to review at least the
+   parts of the form that changed.
+
 4. When authors make only typographic or other, minor corrections that
    users need not review, they increase the _correction_ number.
 
@@ -50,6 +57,10 @@ users of older editions.
    corrected form as second edition, first update, first correction. If
    they later catch and correct a typographical error, the resulting
    edition will be the second edition, first update, second correction.
+
+   Users of the original second edition, first update will know the
+   working group advises they can use the corrected editions without
+   further review.
 
 Authors can also use reviewers editions to mark drafts of a new edition,
 update, or correction editions to come.

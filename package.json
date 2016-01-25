@@ -1,7 +1,7 @@
 {
   "name": "reviewers-edition-parse",
   "description": "parse reviewers edition numbers",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "devDependencies": {
     "defence-cli": "^1.0.5",

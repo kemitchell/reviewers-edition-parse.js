@@ -86,6 +86,13 @@ assert.deepStrictEqual(
   { edition: 2 })
 ```
 
+An _edition_ number cannot be zero, nor can it start with a zero.
+
+```javascript
+assert.equal(parse('0e'), false)
+assert.equal(parse('01e'), false)
+```
+
 The fifth update to a second edition adds the number five followed by
 the lower-case letter "u". So "second edition, fifth update" becomes
 `2e5u`.
@@ -96,6 +103,13 @@ assert.deepStrictEqual(
   { edition: 2, update: 5 })
 ```
 
+An _edition_ number cannot be zero, nor can it start with a zero.
+
+```javascript
+assert.equal(parse('2e0u'), false)
+assert.equal(parse('2e01u'), false)
+```
+
 The seventh correction to that edition adds the number seven followed
 by the lower-case letter "c". So "second edition, fifth update, seventh
 correction" becomes `2e5u7c`.
@@ -104,6 +118,13 @@ correction" becomes `2e5u7c`.
 assert.deepStrictEqual(
   parse('2e5u7c'),
   { edition: 2, update: 5, correction: 7 })
+```
+
+An _correction_ number cannot be zero, nor can it start with a zero.
+
+```javascript
+assert.equal(parse('2e5u0c'), false)
+assert.equal(parse('2e5u01c'), false)
 ```
 
 An edition that has not been updated can also be corrected. So "third

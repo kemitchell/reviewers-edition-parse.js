@@ -1,6 +1,6 @@
 var captureDigit = '([1-9][0-9]*)'
 
-var EUCD = new RegExp(
+var regularExpression = new RegExp(
   '^' +
   captureDigit + 'e' +
   optional(captureDigit + 'u') +
@@ -11,4 +11,4 @@ var EUCD = new RegExp(
 function optional(reString) {
   return ( '(?:' + reString + ')?' ) }
 
-process.stdout.write(( 'module.exports = ' + EUCD + '\n' ))
+process.stdout.write(( 'module.exports = ' + regularExpression + '\n' ))

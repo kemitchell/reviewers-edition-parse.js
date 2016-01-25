@@ -24,7 +24,7 @@ update numbers restart at one for every new edition.
 # Meaning
 
 How the authors of a project change edition numbers over time conveys
-advice to users of older editions about their changes.
+advice to users of older editions.
 
 1. When authors recommend users review a new edition in its entirety to
    ensure it meets their needs, they increase the _edition_ number.

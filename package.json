@@ -1,6 +1,6 @@
 {
   "name": "reviewers-edition-parse",
-  "description": "parse reviewers edition numbers",
+  "description": "parse Reviewers Edition numbers",
   "version": "2.0.4",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "devDependencies": {

@@ -1,9 +1,9 @@
-Reviewers editions are a simple way to number editions of useful prose
+Reviewers Editions are a simple way to number editions of useful prose
 projects, like policy statements or legal terms.
 
 # Numbers
 
-Each reviewers edition has up to four numbers.
+Each Reviewers Edition has up to four numbers.
 
 1. An _edition_ number
 
@@ -13,7 +13,7 @@ Each reviewers edition has up to four numbers.
 
 4. A _draft_ number
 
-Every reviewers edition has an _edition_ number. The _edition_ number
+Every Reviewers Edition has an _edition_ number. The _edition_ number
 and any other numbers must be whole numbers, one or greater, written
 without any leading zeros.
 
@@ -61,7 +61,7 @@ users of older editions.
    Users of "second edition, first update" will know the working group
    advises they can use the corrected editions without further review.
 
-Authors can also use reviewers editions to mark drafts of a new edition,
+Authors can also use Reviewers Editions to mark drafts of a new edition,
 update, or correction to come.
 
 For example, if the working group publishes two drafts of the second
@@ -70,7 +70,7 @@ draft" and "fourth edition, second draft".
 
 # Exported Module
 
-This npm package exports a single function that parses reviewers edition
+This npm package exports a single function that parses Reviewers Edition
 short code strings, returning structured representations of their
 components.
 
@@ -87,7 +87,7 @@ use Node.js' built-in `assert` module.
 var assert = require('assert')
 ```
 
-The simplest reviewers edition has only an _edition_ number. This number
+The simplest Reviewers Edition has only an _edition_ number. This number
 is written followed by the lower-case letter "u". So "second edition"
 becomes `2e`:
 
@@ -141,7 +141,7 @@ edition, second correction" becomes `3e2c`.
 assert.deepStrictEqual(parse('3e2c'), { edition: 3, correction: 2 })
 ```
 
-The first draft of a new fourth edition would use the reviewers edition
+The first draft of a new fourth edition would use the Reviewers Edition
 code for the fourth edition, followed by the number one and the
 lower-case letter "d". So "fourth edition, first draft" becomes `4e1d`.
 
@@ -149,7 +149,7 @@ lower-case letter "d". So "fourth edition, first draft" becomes `4e1d`.
 assert.deepStrictEqual(parse('4e1d'), { edition: 4, draft: 1 })
 ```
 
-Reviewers editions can similarly describe various drafts of new updates
+Reviewers Editions can similarly describe various drafts of new updates
 and corrections. So "fourth edition, fifth update, first draft" becomes
 `4e5u1d`.
 
@@ -168,7 +168,7 @@ assert.deepStrictEqual(
   { edition: 4, update: 5, correction: 8, draft: 1 })
 ```
 
-The parser function returns `false` for any invalid reviewers edition.
+The parser function returns `false` for any invalid Reviewers Edition.
 
 ```javascript
 assert.equal(parse('1.0.0'), false)
@@ -176,7 +176,7 @@ assert.equal(parse('1.0.0'), false)
 
 # Other Modules
 
-An array of names for the numbers of reviewers editions are packaged as
+An array of names for the numbers of Reviewers Editions are packaged as
 a JSON file, and can be required separately.
 
 ```javascript
@@ -216,5 +216,5 @@ function returns `false` for invalid inputs.
 # reved
 
 This package is bundled with other functions for
-creating and manipulating reviewers editions in
+creating and manipulating Reviewers Editions in
 [reved](https://www.npmjs.com/packages/reved).

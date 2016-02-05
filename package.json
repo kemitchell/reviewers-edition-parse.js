@@ -4,6 +4,7 @@
   "version": "2.0.5",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "devDependencies": {
+    "covert": "^1.1.0",
     "defence-cli": "^1.0.5",
     "replace-require-self": "^1.1.0"
   },
@@ -24,7 +25,10 @@
   "repository": "kemitchell/reviewers-edition-parse.js",
   "scripts": {
     "prepublish": "node build-regular-expression.js > regular-expression.js",
-    "pretest": "npm run prepublish",
-    "test": "defence README.md | replace-require-self | node"
+    "tests": "defence README.md | replace-require-self > test.js",
+    "precoverage": "npm run prepublish && npm run tests",
+    "coverage": "covert test.js",
+    "pretest": "npm run prepublish && npm run tests",
+    "test": "node test.js"
   }
 }

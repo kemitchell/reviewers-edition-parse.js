@@ -6,9 +6,11 @@ var regularExpression = new RegExp(
   optional(captureDigit + 'u') +
   optional(captureDigit + 'c') +
   optional(captureDigit + 'd') +
-  '$')
+  '$'
+)
 
-function optional(reString) {
-  return ( '(?:' + reString + ')?' ) }
+function optional (reString) {
+  return '(?:' + reString + ')?'
+}
 
-process.stdout.write(( 'module.exports = ' + regularExpression + '\n' ))
+process.stdout.write('module.exports = ' + regularExpression + '\n')

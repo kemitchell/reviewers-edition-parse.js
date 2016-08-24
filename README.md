@@ -92,7 +92,7 @@ is written followed by the lower-case letter "u". So "second edition"
 becomes `2e`:
 
 ```javascript
-assert.deepStrictEqual(parse('2e'), { edition: 2 })
+assert.deepStrictEqual(parse('2e'), {edition: 2})
 ```
 
 An _edition_ number cannot be zero, nor can it start with a zero.
@@ -107,7 +107,7 @@ the lower-case letter "u". So "second edition, fifth update" becomes
 `2e5u`.
 
 ```javascript
-assert.deepStrictEqual(parse('2e5u'), { edition: 2, update: 5 })
+assert.deepStrictEqual(parse('2e5u'), {edition: 2, update: 5})
 ```
 
 An _edition_ number cannot be zero, nor can it start with a zero.
@@ -124,7 +124,8 @@ correction" becomes `2e5u7c`.
 ```javascript
 assert.deepStrictEqual(
   parse('2e5u7c'),
-  { edition: 2, update: 5, correction: 7 })
+  {edition: 2, update: 5, correction: 7}
+)
 ```
 
 An _correction_ number cannot be zero, nor can it start with a zero.
@@ -138,7 +139,7 @@ An edition that has not been updated can also be corrected. So "third
 edition, second correction" becomes `3e2c`.
 
 ```javascript
-assert.deepStrictEqual(parse('3e2c'), { edition: 3, correction: 2 })
+assert.deepStrictEqual(parse('3e2c'), {edition: 3, correction: 2})
 ```
 
 The first draft of a new fourth edition would use the Reviewers Edition
@@ -146,7 +147,7 @@ code for the fourth edition, followed by the number one and the
 lower-case letter "d". So "fourth edition, first draft" becomes `4e1d`.
 
 ```javascript
-assert.deepStrictEqual(parse('4e1d'), { edition: 4, draft: 1 })
+assert.deepStrictEqual(parse('4e1d'), {edition: 4, draft: 1})
 ```
 
 Reviewers Editions can similarly describe various drafts of new updates
@@ -156,7 +157,8 @@ and corrections. So "fourth edition, fifth update, first draft" becomes
 ```javascript
 assert.deepStrictEqual(
   parse('4e5u1d'),
-  { edition: 4, update: 5, draft: 1 })
+  {edition: 4, update: 5, draft: 1}
+)
 ```
 
 Similarly, "fourth edition, fifth update, eighth correction, first
@@ -165,7 +167,8 @@ draft" becomes `4e5u8c1d`.
 ```javascript
 assert.deepStrictEqual(
   parse('4e5u8c1d'),
-  { edition: 4, update: 5, correction: 8, draft: 1 })
+  {edition: 4, update: 5, correction: 8, draft: 1}
+)
 ```
 
 The parser function returns `false` for any invalid Reviewers Edition.
@@ -182,7 +185,8 @@ a JSON file, and can be required separately.
 ```javascript
 assert.deepStrictEqual(
   require('reviewers-edition-parse/numbers'),
-  [ 'edition', 'update', 'correction', 'draft' ])
+  ['edition', 'update', 'correction', 'draft']
+)
 ```
 
 The regular expression used to parse strings can be also be required

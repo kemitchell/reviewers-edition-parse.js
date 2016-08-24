@@ -6,7 +6,8 @@
   "devDependencies": {
     "covert": "^1.1.0",
     "defence-cli": "^1.0.5",
-    "replace-require-self": "^1.1.0"
+    "replace-require-self": "^1.1.0",
+    "standard": "^8.0.0"
   },
   "files": [
     "LICENSE",
@@ -29,6 +30,7 @@
     "precoverage": "npm run prepublish && npm run tests",
     "coverage": "covert test.js",
     "pretest": "npm run prepublish && npm run tests",
-    "test": "node test.js"
+    "test": "node test.js",
+    "lint": "standard"
   }
 }

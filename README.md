@@ -88,7 +88,7 @@ var assert = require('assert')
 ```
 
 The simplest Reviewers Edition has only an _edition_ number. This number
-is written followed by the lower-case letter "u". So "second edition"
+is written followed by the lower-case letter "e". So "second edition"
 becomes `2e`:
 
 ```javascript
